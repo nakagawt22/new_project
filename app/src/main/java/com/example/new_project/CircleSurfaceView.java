@@ -16,8 +16,8 @@ protected void onDraw(Canvas canvas)
     canvas.drawBitmap(image, 200.f, 200.f, redPaint);
 
 }
-
-public void onProgressChanged()
+@Override
+public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser)
 {
     //Want to update the size of circle
     //A: need to member variable to hold gold updated info
@@ -25,3 +25,6 @@ public void onProgressChanged()
     //B: We have to tell the view that it is no longer valid
     invalidate();
 }
+
+
+
